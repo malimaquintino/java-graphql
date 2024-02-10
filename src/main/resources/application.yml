@@ -1,0 +1,33 @@
+application:
+  title: Java-graphql
+  version: 0.0.1-SNAPSHOT
+
+environment: dev
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: java-graphql
+    datasource:
+      url: jdbc:postgresql://localhost:5432/learning?currentSchema=java_graphql
+      username: postgres
+      password: mypass
+    jpa:
+      hibernate:
+        ddl-auto: validate
+      properties:
+        hibernate:
+          format_sql: true
+          jdbc:
+            lob:
+              non_contextual_creation: true
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: false
+      flyway:
+        enabled: true
+        schemas: user
+        baseline-on-migrate: true
+        baseline-version: "1_001"
+        ignore-future-migrations: false
