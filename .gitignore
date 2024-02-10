@@ -24,5 +24,6 @@ hs_err_pid*
 
 databases/
 
-./idea
-./target
+idea/*
+target/*
+databases/*
