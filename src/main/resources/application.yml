@@ -2,7 +2,7 @@ application:
   title: Java-graphql
   version: 0.0.1-SNAPSHOT
 
-environment: dev
+environment: local
 
 server:
   port: 8080
@@ -10,24 +10,36 @@ server:
 spring:
   application:
     name: java-graphql
-    datasource:
-      url: jdbc:postgresql://localhost:5432/learning?currentSchema=java_graphql
-      username: postgres
-      password: mypass
-    jpa:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/learning?currentSchema=java_graphql
+    username: postgres
+    password: mypass
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
       hibernate:
-        ddl-auto: validate
-      properties:
-        hibernate:
-          format_sql: true
-          jdbc:
-            lob:
-              non_contextual_creation: true
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-      show-sql: false
-      flyway:
-        enabled: true
-        schemas: user
-        baseline-on-migrate: true
-        baseline-version: "1_001"
-        ignore-future-migrations: false
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    flyway:
+      enabled: true
+      schemas: java_graphql
+      baseline-on-migrate: true
+      baseline-version: "1_001"
+      ignore-future-migrations: false
+
+#graphql:
+#  playground:
+#    endpoint: /graphql
+#    subscriptionEndpoint: /subscriptions
+#    enabled: true
+#    pageTitle: Playground
+#    cdn:
+#      enabled: false
+#      version: latest
+#    static-path:
+#      base: /api/vendor/playground/
