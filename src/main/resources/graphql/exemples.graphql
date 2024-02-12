@@ -1,0 +1,43 @@
+
+# list user
+{
+    users{
+        id
+        name
+        email
+    }
+}
+
+# user by id
+{
+    user(id:1) {
+        id
+        name
+        email
+    }
+}
+
+# new user
+mutation {
+    saveUser(user:{
+        name:"Maria",
+        email:"maria@mail.com"
+    }) {
+        id
+        name
+        email
+    }
+}
+
+# update user
+mutation {
+    saveUser(user:{
+        id: 1
+        name:"Matheus",
+        email:"matheus@mail.com"
+    }) {
+        id
+        name
+        email
+    }
+}

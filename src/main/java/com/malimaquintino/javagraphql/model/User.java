@@ -1,13 +1,16 @@
 package com.malimaquintino.javagraphql.model;
 
-import lombok.*;
+import com.malimaquintino.javagraphql.dto.UserInputDto;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_user")
-@Getter
-@Setter
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,4 +23,13 @@ public class User {
     private String name;
     @Column(name = "email", nullable = false)
     private String email;
+
+    public static User parseFromDto(UserInputDto userInputDto) {
+        User user = new User();
+        user.setId(userInputDto.getId());
+        user.setName(userInputDto.getName());
+        user.setEmail(userInputDto.getEmail());
+        return user;
+    }
+
 }
