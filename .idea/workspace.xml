@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7edfeb7-031c-43ee-a045-b9c35501e033" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/graphql/UserGraphQl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/graphql/UserGraphQl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/user.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/user.graphqls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="GraphQL File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="GraphQL File" />
       </list>
     </option>
   </component>
@@ -55,13 +52,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/matheus/projeto/java-graphql",
+    "last_opened_file_path": "/home/matheus/projeto/java-graphql/src/main/resources/graphql",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/graphql" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.malimaquintino.javagraphql.dto" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="JavaGraphqlApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.malimaquintino.javagraphql.JavaGraphqlApplication" />

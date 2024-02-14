@@ -41,3 +41,32 @@ mutation {
         email
     }
 }
+
+# -------------------------------------
+# ROLES
+
+# list roles
+{
+    roles{
+        id
+        name
+    }
+}
+
+# role by id
+{
+    role(id:3) {
+        id
+        name
+    }
+}
+
+# new role
+mutation {
+   saveRole(role:{
+     name:"Member",
+   }) {
+     id
+     name
+   }
+ }

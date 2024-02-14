@@ -1,0 +1,18 @@
+type Role {
+    id:ID!
+    name:String!
+}
+
+extend type Query {
+    roles:[Role]
+    role(id:ID!):Role
+}
+
+extend type Mutation {
+    saveRole(role:RoleInput):Role
+}
+
+input RoleInput {
+    id:ID
+    name:String!
+}
