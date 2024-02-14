@@ -1,3 +1,4 @@
+# USER
 
 # list user
 {
@@ -70,3 +71,32 @@ mutation {
      name
    }
  }
+
+# -------------------------------------
+# GROUPS
+
+# list groups
+{
+    groups{
+        id
+        name
+    }
+}
+
+# role by id
+{
+    group(id:3) {
+        id
+        name
+    }
+}
+
+# new group
+mutation {
+    saveGroup(group:{
+        name:"Group A",
+    }) {
+        id
+        name
+    }
+}
