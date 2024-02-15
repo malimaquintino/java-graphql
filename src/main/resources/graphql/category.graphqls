@@ -1,0 +1,22 @@
+type Category {
+    id:ID!
+    name:String!
+    description:String!
+    group:Group
+}
+
+extend type Query {
+    categories:[Category]
+    category(id:ID!):Category
+}
+
+extend type Mutation {
+    saveCategory(category:CategoryInput):Category
+}
+
+input CategoryInput {
+    id:ID
+    name:String!
+    description:String!
+    groupId: Int!
+}
