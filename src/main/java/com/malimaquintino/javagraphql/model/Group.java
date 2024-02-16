@@ -1,16 +1,14 @@
 package com.malimaquintino.javagraphql.model;
 
 import com.malimaquintino.javagraphql.dto.GroupInputDto;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_group")
-@Data
+@Getter
+@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

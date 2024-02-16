@@ -100,3 +100,45 @@ mutation {
         name
     }
 }
+
+# -------------------------------------
+# CATEGORY
+
+# list category
+{
+    categories{
+        id
+        name
+        description
+        group{
+            id
+            name
+        }
+    }
+}
+
+# category by id
+{
+    category(id:3) {
+        id
+        name
+        description
+        group{
+            id
+            name
+        }
+    }
+}
+
+# new category
+mutation {
+    saveCategory(category:{
+        name:"Category B",
+        description: "The category B"
+        groupId: 1
+    }) {
+        id
+        name
+        description
+    }
+}

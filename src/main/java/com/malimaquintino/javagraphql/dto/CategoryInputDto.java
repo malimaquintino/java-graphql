@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -14,4 +16,6 @@ public class CategoryInputDto {
     private String name;
     private String description;
     private long groupId;
+    private List<String> membersEmail;
+    private List<String> adminsEmail;
 }

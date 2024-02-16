@@ -6,6 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d7edfeb7-031c-43ee-a045-b9c35501e033" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/dto/CategoryInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/dto/CategoryInputDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/category/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/category/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/role/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/role/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/role/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/role/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/category.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/category.graphqls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/exemples.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/exemples.graphql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,25 +52,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.JavaGraphqlApplication.executor": "Debug",
-    "Maven.catalog [clean,compile].executor": "Run",
-    "Maven.catalog [clean,install].executor": "Run",
-    "Maven.catalog [clean].executor": "Run",
-    "Maven.java-graphql [clean,compile].executor": "Run",
-    "Maven.java-graphql [clean].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/matheus/projeto/java-graphql/src/main/resources/graphql",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.JavaGraphqlApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.catalog [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.catalog [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.catalog [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.java-graphql [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.java-graphql [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/matheus/projeto/java-graphql/src/main/resources/graphql&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/graphql" />
@@ -118,5 +132,21 @@
       <updated>1707601694618</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/category/CategoryServiceImpl.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/category/CategoryServiceImpl.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

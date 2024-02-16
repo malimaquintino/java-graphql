@@ -29,6 +29,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
     public User save(UserInputDto userInputDto) {
         return userRepository.save(User.parseFromDto(userInputDto));
     }
