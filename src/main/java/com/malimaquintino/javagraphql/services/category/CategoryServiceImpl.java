@@ -46,7 +46,12 @@ public class CategoryServiceImpl implements CategoryService {
     public Category save(CategoryInputDto categoryInputDto) {
         try {
             Group group = groupService.findById(categoryInputDto.getGroupId());
-            Category category = Category.parseFromDto(categoryInputDto, group);
+            Category category = new Category();
+            if (categoryInputDto.getId() > 0) {
+                category = findById(categoryInputDto.getId());
+                // if null throw exception
+            }
+            category = Category.parseFromDto(categoryInputDto, group);
             category.setUsersRole(findUsersAndRoles(categoryInputDto, category));
             return categoryRepository.save(category);
         } catch (Exception e) {
@@ -73,12 +78,11 @@ public class CategoryServiceImpl implements CategoryService {
                 throw new NoSuchElementException("User not found");
             }
 
-            userRoles.add(CategoryUserRole.builder()
-                    .category(category)
-                    .role(roleMember)
-                    .user(member)
-                    .build()
-            );
+            CategoryUserRole categoryUserRole = new CategoryUserRole();
+            categoryUserRole.setCategory(category);
+            categoryUserRole.setUser(member);
+            categoryUserRole.setRole(roleMember);
+            userRoles.add(categoryUserRole);
         }
 
         for (String admEmail : categoryInputDto.getAdminsEmail()) {
@@ -88,12 +92,11 @@ public class CategoryServiceImpl implements CategoryService {
                 throw new NoSuchElementException("User not found");
             }
 
-            userRoles.add(CategoryUserRole.builder()
-                    .category(category)
-                    .role(roleAdmin)
-                    .user(adm)
-                    .build()
-            );
+            CategoryUserRole categoryUserRole = new CategoryUserRole();
+            categoryUserRole.setCategory(category);
+            categoryUserRole.setUser(adm);
+            categoryUserRole.setRole(roleAdmin);
+            userRoles.add(categoryUserRole);
         }
 
         return userRoles;

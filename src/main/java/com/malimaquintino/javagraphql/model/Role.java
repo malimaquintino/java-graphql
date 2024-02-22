@@ -1,7 +1,8 @@
 package com.malimaquintino.javagraphql.model;
 
 import com.malimaquintino.javagraphql.dto.RoleInputDto;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -9,9 +10,6 @@ import javax.persistence.*;
 @Table(name = "tb_role")
 @Getter
 @Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class Role {
 
     @Id
@@ -23,9 +21,9 @@ public class Role {
     private String name;
 
     public static Role parseFromDto(RoleInputDto roleInputDto) {
-        return Role.builder()
-                .id(roleInputDto.getId())
-                .name(roleInputDto.getName())
-                .build();
+        Role role = new Role();
+        role.setId(roleInputDto.getId());
+        role.setName(roleInputDto.getName());
+        return role;
     }
 }

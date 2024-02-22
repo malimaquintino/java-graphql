@@ -2,7 +2,8 @@ package com.malimaquintino.javagraphql.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.malimaquintino.javagraphql.dto.CategoryInputDto;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -12,9 +13,6 @@ import java.util.Set;
 @Table(name = "tb_category")
 @Getter
 @Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_sequence")
@@ -31,16 +29,24 @@ public class Category {
     @OneToOne
     private Group group;
 
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<CategoryUserRole> usersRole = new HashSet<>();
 
     public static Category parseFromDto(CategoryInputDto categoryInputDto, Group group) {
-        return Category.builder()
-                .id(categoryInputDto.getId())
-                .name(categoryInputDto.getName())
-                .description(categoryInputDto.getDescription())
-                .group(group)
-                .build();
+        Category category = new Category();
+        if (categoryInputDto.getId() > 0)
+            category.setId(categoryInputDto.getId());
+        category.setName(categoryInputDto.getName());
+        category.setDescription(categoryInputDto.getDescription());
+        category.setGroup(group);
+        return category;
+    }
+
+    public void setUsersRole(Set<CategoryUserRole> userRoles) {
+        this.usersRole.clear();
+        if (userRoles != null) {
+            this.usersRole = userRoles;
+        }
     }
 }

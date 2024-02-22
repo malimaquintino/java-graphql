@@ -1,7 +1,8 @@
 package com.malimaquintino.javagraphql.model;
 
 import com.malimaquintino.javagraphql.dto.GroupInputDto;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -9,9 +10,6 @@ import javax.persistence.*;
 @Table(name = "tb_group")
 @Getter
 @Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class Group {
 
     @Id
@@ -23,9 +21,9 @@ public class Group {
     private String name;
 
     public static Group parseFromDto(GroupInputDto groupInputDto) {
-        return Group.builder()
-                .id(groupInputDto.getId())
-                .name(groupInputDto.getName())
-                .build();
+        Group group = new Group();
+        group.setId(groupInputDto.getId());
+        group.setName(groupInputDto.getName());
+        return group;
     }
 }

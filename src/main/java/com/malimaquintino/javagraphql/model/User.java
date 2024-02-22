@@ -1,7 +1,8 @@
 package com.malimaquintino.javagraphql.model;
 
 import com.malimaquintino.javagraphql.dto.UserInputDto;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -9,9 +10,6 @@ import javax.persistence.*;
 @Table(name = "tb_user")
 @Getter
 @Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_sequence")
@@ -23,11 +21,11 @@ public class User {
     private String email;
 
     public static User parseFromDto(UserInputDto userInputDto) {
-        return User.builder()
-                .id(userInputDto.getId())
-                .name(userInputDto.getName())
-                .email(userInputDto.getEmail())
-                .build();
+        User user = new User();
+        user.setId(userInputDto.getId());
+        user.setName(userInputDto.getName());
+        user.setEmail(userInputDto.getEmail());
+        return user;
     }
 
 }

@@ -6,20 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d7edfeb7-031c-43ee-a045-b9c35501e033" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/dto/CategoryInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/dto/CategoryInputDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/CategoryUserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/CategoryUserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/CategoryUserRoleID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/CategoryUserRoleID.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Group.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/category/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/category/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/role/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/role/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/role/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/role/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/user/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/category.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/category.graphqls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/exemples.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/exemples.graphql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,21 +125,5 @@
       <updated>1707601694618</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/category/CategoryServiceImpl.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/malimaquintino/javagraphql/services/category/CategoryServiceImpl.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
