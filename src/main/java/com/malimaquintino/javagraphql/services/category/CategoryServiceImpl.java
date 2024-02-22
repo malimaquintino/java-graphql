@@ -33,12 +33,22 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<Category> findCategories() {
-        return categoryRepository.findAll();
+        try {
+            return categoryRepository.findAll();
+        } catch (Exception ex) {
+            log.error("Error: {}", ex.getMessage());
+            throw new RuntimeException("Error on find Category");
+        }
     }
 
     @Override
     public Category findById(Long id) {
-        return categoryRepository.findById(id).orElse(null);
+        try {
+            return categoryRepository.findById(id).orElse(null);
+        } catch (Exception ex) {
+            log.error("Error: {}", ex.getMessage());
+            throw new RuntimeException("Error on find Category");
+        }
     }
 
     @Override
@@ -61,44 +71,50 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     private Set<CategoryUserRole> findUsersAndRoles(CategoryInputDto categoryInputDto, Category category) {
-        Set<CategoryUserRole> userRoles = new HashSet<>();
+        try {
+            Set<CategoryUserRole> userRoles = new HashSet<>();
 
-        Role roleAdmin = roleService.findByName("Admin");
-        Role roleMember = roleService.findByName("Member");
+            Role roleAdmin = roleService.findByName("Admin");
+            Role roleMember = roleService.findByName("Member");
 
-        if (Objects.isNull(roleAdmin) || Objects.isNull(roleMember)) {
-            log.warn("Role not found");
-            throw new NoSuchElementException("Role not found");
-        }
-
-        for (String memberEmail : categoryInputDto.getMembersEmail()) {
-            User member = userService.findByEmail(memberEmail);
-
-            if (Objects.isNull(member)) {
-                throw new NoSuchElementException("User not found");
+            if (Objects.isNull(roleAdmin) || Objects.isNull(roleMember)) {
+                log.warn("Role not found");
+                throw new NoSuchElementException("Role not found");
             }
 
-            CategoryUserRole categoryUserRole = new CategoryUserRole();
-            categoryUserRole.setCategory(category);
-            categoryUserRole.setUser(member);
-            categoryUserRole.setRole(roleMember);
-            userRoles.add(categoryUserRole);
-        }
+            for (String memberEmail : categoryInputDto.getMembersEmail()) {
+                User member = userService.findByEmail(memberEmail);
 
-        for (String admEmail : categoryInputDto.getAdminsEmail()) {
-            User adm = userService.findByEmail(admEmail);
+                if (Objects.isNull(member)) {
+                    throw new NoSuchElementException("User not found");
+                }
 
-            if (Objects.isNull(adm)) {
-                throw new NoSuchElementException("User not found");
+                CategoryUserRole categoryUserRole = new CategoryUserRole();
+                categoryUserRole.setCategory(category);
+                categoryUserRole.setUser(member);
+                categoryUserRole.setRole(roleMember);
+                userRoles.add(categoryUserRole);
             }
 
-            CategoryUserRole categoryUserRole = new CategoryUserRole();
-            categoryUserRole.setCategory(category);
-            categoryUserRole.setUser(adm);
-            categoryUserRole.setRole(roleAdmin);
-            userRoles.add(categoryUserRole);
-        }
+            for (String admEmail : categoryInputDto.getAdminsEmail()) {
+                User adm = userService.findByEmail(admEmail);
 
-        return userRoles;
+                if (Objects.isNull(adm)) {
+                    throw new NoSuchElementException("User not found");
+                }
+
+                CategoryUserRole categoryUserRole = new CategoryUserRole();
+                categoryUserRole.setCategory(category);
+                categoryUserRole.setUser(adm);
+                categoryUserRole.setRole(roleAdmin);
+                userRoles.add(categoryUserRole);
+            }
+            return userRoles;
+        } catch (NoSuchElementException ex) {
+            throw new RuntimeException(ex.getMessage());
+        } catch (Exception ex) {
+            log.error("Error: {}", ex.getMessage());
+            throw new RuntimeException("Error on find Category");
+        }
     }
 }
