@@ -9,7 +9,25 @@ services:
       POSTGRES_PASSWORD: mypass
       PGDATA: /data/postgres
     volumes:
-       - ./databases/postgres:/data/postgres
+      - ./databases/postgres:/data/postgres
     ports:
       - "5432:5432"
     restart: always
+    networks:
+      - app-network
+
+  java-app:
+    build:
+      context: .
+    container_name: java-graphql
+    command: "java -jar /app/runner.jar"
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    ports:
+      - "8080:8080"
+
+networks:
+  app-network:
+    driver: bridge
